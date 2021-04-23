@@ -1,0 +1,38 @@
+{
+  "name": "ForceSubscribe",
+  "description": "ForceSubscribe, a telegram bot who can force user to join your channel",
+  "env": {
+    "API_ID": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Get this value by running [python3 mysession.py] in Termux or local system.",
+      "required": true
+    },
+    "DATABASE_URL": {
+      "description": "This is for the database account, you can obtain it from mongodb.com.",
+      "required": true
+    },
+    "SUDO_USERS": {
+      "description": "Your heroku api key if using heroku.",
+      "required": false
+    },
+    "PREFIX": {
+      "description": "Command handler.",
+      "required": true,
+      "vale": "."
+    },
+    
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
