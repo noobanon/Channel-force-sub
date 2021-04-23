@@ -37,7 +37,6 @@ def _onUnMuteRequest(client, cb):
 
 
 
-@Client.on_message(filters.text & ~filters.private & ~filters.edited, group=1)
 def _check_member(client, message):
   chat_id = message.chat.id
   chat_db = sql.fs_settings(chat_id)
@@ -53,7 +52,9 @@ def _check_member(client, message):
               "{}, you are **not subscribed** to my [channel](https://t.me/{}) yet. Please [join](https://t.me/{}) and **press the button below** to unmute yourself.".format(message.from_user.mention, channel, channel),
               disable_web_page_preview=True,
               reply_markup=InlineKeyboardMarkup(
-                  [[InlineKeyboardButton("UnMute Me", callback_data="onUnMuteRequest")]]
+                  [[InlineKeyboardButton("Join", url=f"https://t.me/{channel}")]],
+                  [InlineKeyboardButton("UnMute Me", callback_data="onUnMuteRequest")]
+                  
               )
           )
           client.restrict_chat_member(chat_id, user_id, ChatPermissions(can_send_messages=False))
@@ -63,7 +64,6 @@ def _check_member(client, message):
       except ChatAdminRequired:
         client.send_message(chat_id, text=f"❗ **I am not an admin in @{channel}**\n__Make me admin in the channel and add me again.\n#Leaving this chat...__")
         client.leave_chat(chat_id)
-
 
 @Client.on_message(filters.command(["forcesubscribe", "fsub"]) & ~filters.private)
 def config(client, message):
