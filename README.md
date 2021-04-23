@@ -21,7 +21,7 @@ git clone https://github.com/noobanon/channel-force-sub
 ```
 - Change directory
 ```
-cd force-subscribe-telegram-bot
+cd Channel-force-sub
 ```
 - Install requirements
 ```
