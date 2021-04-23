@@ -5,6 +5,7 @@ class Config():
   ENV = bool(os.environ.get('ENV', False))
   if ENV:
     BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
+    PREFIX = os.getenv("PREFIX")
     DATABASE_URL = os.environ.get("DATABASE_URL", None)
     APP_ID = os.environ.get("APP_ID", 6)
     API_HASH = os.environ.get("API_HASH", None)
@@ -13,6 +14,7 @@ class Config():
     SUDO_USERS = list(set(SUDO_USERS))
   else:
     BOT_TOKEN = ""
+    PREFIX = ""
     DATABASE_URL = ""
     APP_ID = ""
     API_HASH = ""
@@ -33,5 +35,3 @@ class Messages():
         
         "**Fixed Repo By @noobanon /n Thanks to viperadnan-git**"
       ]
-
-      START_MSG = "**Hey [{}](tg://user?id={})**\n__I can force members to join a specific channel before writing messages in the group.\nLearn more at /help__"
