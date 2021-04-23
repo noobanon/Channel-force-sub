@@ -36,5 +36,5 @@ python3 bot.py
 
 ## Thanks to
 - [PyroGram](https://PyroGram.org)
-- [viperadnan]https://github.com/viperadnan-git)
+- [viperadnan](https://github.com/viperadnan-git) Souce - Owner
 - [Hasibul Kabir](https://GitHub.com/hasibulkabir) and [Spechide](https://GitHub.com/spechide) for helping.
