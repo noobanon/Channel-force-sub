@@ -8,10 +8,12 @@
 - [X] Clean messages after Completion
 - [x] Added Join As Button
 - [x] Added get user id
+- [x] Heroku Support
 - [ ] LOGGER support.
 
 ## Deploy
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/noobanon/Channel-force-sub)
 ### Installation
 - Clone this repo
 ```
