@@ -7,6 +7,7 @@
 - [X] Configure different groups with different channels
 - [X] Clean messages after Completion
 - [x] Added Join As Button
+- [x] Added get user id
 - [ ] LOGGER support.
 
 ## Deploy
