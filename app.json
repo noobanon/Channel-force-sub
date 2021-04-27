@@ -1,4 +1,13 @@
 {
+   "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
+
   "name": "ForceSubscribe",
   "description": "ForceSubscribe, a telegram bot who can force user to join your channel",
   "env": {
@@ -36,3 +45,5 @@
     }
   }
 }
+
+
